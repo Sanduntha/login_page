@@ -118,6 +118,7 @@ const LoginForm = () => {
                                     borderRadius: '12px',
                                 },
                             }}
+
                             margin="normal"
                             label="Email"
                             variant="outlined"
@@ -131,6 +132,7 @@ const LoginForm = () => {
                                 ),
                             }}
                         />
+                        
                         <TextField
                             sx={{
                                 width: '350px',     
