@@ -14,7 +14,7 @@ import { Visibility, VisibilityOff, Email } from '@mui/icons-material';
 import { loginUser } from '../services/authService';
 import Header from './Header';
 import Swal from 'sweetalert2';
-// import loginImage from '../assets/image.jpg'
+import loginImage from '../assets/image.jpg'
 
 const LoginForm = () => {
     const [username, setUsername] = useState('');
@@ -29,7 +29,7 @@ const LoginForm = () => {
         setLoading(true);
         setError('');
 
-            //    try {
+               try {
             const response = await loginUser(username, password);
             console.log('Login successful', response);
 
@@ -111,7 +111,7 @@ const LoginForm = () => {
                     <Box component="form" onSubmit={handleLogin} sx={{ px: 2 }}>
                         <TextField
                             sx={{
-                                // width: '350px',      
+                                width: '350px',      
                                 mb: 2,
                                 '& .MuiOutlinedInput-root': {
                                     backgroundColor: '#e3f2fd',
@@ -135,7 +135,7 @@ const LoginForm = () => {
 
                         <TextField
                             sx={{
-                                // width: '350px',     
+                                width: '350px',     
                                 mb: 2,
                                 '& .MuiOutlinedInput-root': {
                                     backgroundColor: '#e3f2fd',
