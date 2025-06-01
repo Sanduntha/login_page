@@ -84,23 +84,29 @@ const LoginForm = () => {
                     }}
                 >
                     <Header />
+
                     <Box sx={{ mt: 6, mb: 3, px: 2 }}>
                         <Typography variant="caption" fontWeight="medium" color="text.secondary">
                             START FOR FREE
                         </Typography>
+
                         <Typography variant="h3" component="h1" fontWeight="bold" sx={{ mt: 1 }}>
                             Login to account
                             <Box component="span" sx={{ color: '#4285F4' }}>.</Box>
                         </Typography>
+
                         <Box sx={{ mt: 1 }}>
                             <Typography variant="body2" color="text.secondary" component="span">
                                 New to Anywhere?
                             </Typography>
+
                             <Link href="#" underline="hover" ml={1} color="#4285F4">
                                 Create an account
                             </Link>
+
                         </Box>
                     </Box>
+
                     <Box component="form" onSubmit={handleLogin} sx={{ px: 2 }}>
                         <TextField
                             sx={{
@@ -124,9 +130,6 @@ const LoginForm = () => {
                                 ),
                             }}
                         />
-
-
-
                         <TextField
                             sx={{
                                 width: '350px',     
