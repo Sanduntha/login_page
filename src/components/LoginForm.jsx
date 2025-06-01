@@ -27,7 +27,31 @@ const LoginForm = () => {
         e.preventDefault();
         setLoading(true);
         setError('');
-  
+
+               try {
+            const response = await loginUser(username, password);
+            console.log('Login successful', response);
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Login Successful',
+                text: `Welcome, ${username}`,
+                timer: 2000,
+                showConfirmButton: false,
+            });
+
+        } catch (err) {
+            console.error('Login failed', err);
+            setError('Invalid username or password.');
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Failed',
+                text: 'Invalid username or password. Please try again.',
+            });
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
