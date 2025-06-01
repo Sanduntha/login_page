@@ -3,6 +3,7 @@ import { Box, Typography, Button, Stack } from '@mui/material';
 const Header = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, width: '100%' }}>
+        
       <Stack direction="row" spacing={1} alignItems="center">
         <Box 
           sx={{ 
@@ -19,10 +20,12 @@ const Header = () => {
           Anywhere app.
         </Typography>
       </Stack>
+
       <Stack direction="row" spacing={3}>
         <Button color="inherit" sx={{ color: 'text.secondary' }}>Home</Button>
         <Button color="inherit" sx={{ color: 'text.secondary' }}>Join</Button>
       </Stack>
+
     </Box>
   );
 };
