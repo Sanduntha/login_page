@@ -14,7 +14,7 @@ import { Visibility, VisibilityOff, Email } from '@mui/icons-material';
 import { loginUser } from '../services/authService';
 import Header from './Header';
 import Swal from 'sweetalert2';
-import loginImage from '../assets/image.jpg'; // Adjust the path if needed
+import loginImage from '../assets/image.jpg'; 
 
 const LoginForm = () => {
     const [username, setUsername] = useState('');
@@ -39,7 +39,6 @@ const LoginForm = () => {
                 showConfirmButton: false,
             });
 
-            // Store token or redirect if needed
         } catch (err) {
             console.error('Login failed', err);
             setError('Invalid username or password.');
@@ -75,7 +74,6 @@ const LoginForm = () => {
                     borderRadius: 4,
                 }}
             >
-                {/* Left side - Form */}
                 <Box
                     sx={{
                         width: { xs: '100%', md: '50%' },
@@ -105,7 +103,7 @@ const LoginForm = () => {
                     <Box component="form" onSubmit={handleLogin} sx={{ px: 2 }}>
                         <TextField
                             sx={{
-                                width: '350px',      // Adjusted to a more usable width
+                                width: '350px',      
                                 mb: 2,
                                 '& .MuiOutlinedInput-root': {
                                     backgroundColor: '#e3f2fd',
@@ -130,7 +128,7 @@ const LoginForm = () => {
 
                         <TextField
                             sx={{
-                                width: '350px',      // Adjusted to a more usable width
+                                width: '350px',      
                                 mb: 2,
                                 '& .MuiOutlinedInput-root': {
                                     backgroundColor: '#e3f2fd',
@@ -155,7 +153,7 @@ const LoginForm = () => {
                                     </InputAdornment>
                                 ),
                                 sx: {
-                                    backgroundColor: '#e3f2fd', // light blue
+                                    backgroundColor: '#e3f2fd', 
                                     borderRadius: '12px',
 
                                 },
@@ -192,7 +190,6 @@ const LoginForm = () => {
                     </Box>
                 </Box>
 
-                {/* Right side - Image */}
                 <Box
                     sx={{
                         display: { xs: 'none', md: 'block' },
